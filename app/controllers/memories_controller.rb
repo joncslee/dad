@@ -1,7 +1,7 @@
 class MemoriesController < ApplicationController
   def index
     @title = 'hello'
-    @memories = Memory.all
+    @memories = Memory.order('id asc')
   end
 
   def modal

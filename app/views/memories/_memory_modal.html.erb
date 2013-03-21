@@ -1,2 +1,6 @@
-<p>That time when <%= @memory.description %></p>
+
 <a class="close-reveal-modal">&#215;</a>
+<% if @memory.image.url %>
+  <%= image_tag @memory.image %>
+<% end %>
+<p>That time when <%= @memory.description %></p>

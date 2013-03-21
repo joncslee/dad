@@ -9,6 +9,9 @@
   <% @memories.each do |m| %>
     <li>
       <a class="memory" href="#" onclick="fillModal(<%= m.id %>)" data-reveal-id="memory-modal">
+        <% if m.image.url %>
+          <%= image_tag m.image.thumb %><br />
+        <% end %>
         <%= m.description %>
       </a>
     </li>
@@ -29,5 +32,5 @@
 </script>
 
 
-<div id="memory-modal" class="reveal-modal">
+<div id="memory-modal" class="reveal-modal medium">
 </div>

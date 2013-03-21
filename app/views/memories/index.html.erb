@@ -1,0 +1,33 @@
+<div class="headline">
+  <h1>HAPPY 60TH BIRTHDAY, DADDY!</h1>
+  <p>In honor of your 60th birthday, here are my top 60 memories of our lives together:</p>
+</div>
+
+<h2>THAT TIME WHEN...</h2>
+
+<ul class="memories large-block-grid-4">
+  <% @memories.each do |m| %>
+    <li>
+      <a class="memory" href="#" onclick="fillModal(<%= m.id %>)" data-reveal-id="memory-modal">
+        <%= m.description %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<script>
+  function fillModal(id) {
+    $.ajax({
+        url: "/memories/modal/" + id,
+        cache: false,
+        success: function(html){
+          $("#memory-modal").empty();
+          $("#memory-modal").append(html);
+        }
+    });
+  }
+</script>
+
+
+<div id="memory-modal" class="reveal-modal">
+</div>

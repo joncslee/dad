@@ -1,6 +1,5 @@
 class MemoriesController < ApplicationController
   def index
-    @title = 'hello'
     @memories = Memory.order('id asc')
   end
 

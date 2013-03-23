@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1>THE LIST</h1>
+    <ol class="list">
+      <% @memories.each do |memory| %>
+        <li>That time when <%= memory.description %></li>
+      <% end %>
+    </ol>
+    <div class="toggle">
+      <%= link_to 'Back to the main page!', '/' %>
+    </div>
+  </div>
+</div>

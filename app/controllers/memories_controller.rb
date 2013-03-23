@@ -7,4 +7,8 @@ class MemoriesController < ApplicationController
     @memory = Memory.find_by_id(params[:id])
     render :partial => 'memory_modal', :layout => false
   end
+
+  def list
+    @memories = Memory.order('id asc')
+  end
 end

@@ -5,3 +5,12 @@
 <% end %>
 <p>That time when <%= @memory.description %></p>
 <p class="comments"><%= @memory.comments %></p>
+<div class="controls">
+  <% if @memory.prev %>
+    <a class="prev" href="javascript:void(0)" onclick="fillModal(<%= @memory.prev.id %>);return false;">&larr; Previous</a>
+  <% end %>
+
+  <% if @memory.next %>
+    <a class="next" href="javascript:void(0)" onclick="fillModal(<%= @memory.next.id %>);return false;">Next &rarr;</a>
+  <% end %>
+</div>

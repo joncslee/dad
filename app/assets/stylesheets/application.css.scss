@@ -22,7 +22,11 @@ image.full {
   margin: 50px 0;
 }
 
+h1 {
+  margin-bottom: 0;
+}
 h2 {
+  font-size: 28px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -35,6 +39,7 @@ ul.memories {
     color: #333;
     line-height: 1.3em;
     font-size: 13px;
+    margin-bottom: 20px;
     &:hover {
       background-color: #ededed;
     }
@@ -47,6 +52,14 @@ ul.memories {
     }
   }
 
+}
+
+.toggle {
+  text-align: center;
+  margin-bottom: 20px;
+  a {
+    font-weight: bold;
+  }
 }
 
 #memory-modal {
@@ -63,6 +76,21 @@ ul.memories {
       margin-top: 10px;
     }
   }
+
+  .controls {
+    margin-top: 20px;
+    a {
+      font-size: 12px;
+      color: #999;
+      font-style: italic;
+      &.prev {
+        float: left;
+      }
+      &.next {
+        float: right;
+      }
+    }
+  }
 }
 
 #login {
@@ -77,5 +105,11 @@ ul.memories {
   }
   p.error {
     color: red;
+    font-style: normal;
+    font-weight: bold;
   }
+}
+
+ol.list {
+  margin-left: 25px;
 }
